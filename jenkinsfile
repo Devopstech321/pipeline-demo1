@@ -2,10 +2,19 @@ pipeline
 {
     agent any
     stages
-    { stage ('scmcheckout')
-    { steps {sh 'echo code is downloaded'}
-    stage ('created deployable package')
-    { steps {sh 'echo created artifacts'}
+    { stage ('scm checkout')
+    { 
+    steps {sh 'echo code is downloaded'}
     }
-    }}
+    stage ('created deployable package')
+    { 
+    steps {sh 'echo created artifacts'}
+    }
+    stage ('deply to dev env')
+    {
+    steps {sh 'echo deploy to dev env'}
+    }
+    stage ('deploy to QA env')
+    {stage{sh 'deploy to QA env'}}
+    }
 }
