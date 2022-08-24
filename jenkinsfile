@@ -10,5 +10,11 @@ pipeline
     { 
     steps {sh 'echo created artifacts'}
     }
+    stage ('deply to dev env')
+    {
+    steps {sh 'echo deploy to dev env'}
+    }
+    stage ('deploy to QA env')
+    {stage{sh 'deploy to QA env'}}
     }
 }
