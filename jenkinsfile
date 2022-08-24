@@ -1,0 +1,11 @@
+pipeline
+{
+    agent any
+    stages
+    { stage ('scmcheckout')
+    { steps {sh 'echo code is downloaded'}
+    stage ('created deployable package')
+    { steps {sh 'echo created artifacts'}
+    }
+    }}
+}
