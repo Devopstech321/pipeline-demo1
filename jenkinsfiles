@@ -1,0 +1,15 @@
+pipeline
+{
+    agent any
+    stages
+    {
+     stage ('copy code from git hub')
+     {
+        steps {sh 'echo codeis copying'}
+     }
+     stages ('deployment')
+     {
+        steps {sh 'echo hello code is deployed'}
+     }
+    }
+}
