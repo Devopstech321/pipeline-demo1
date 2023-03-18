@@ -7,7 +7,7 @@ pipeline
      {
         steps {sh 'echo codeis copying'}
      }
-     stages ('deployment')
+     stage ('deployment')
      {
         steps {sh 'echo hello code is deployed'}
      }
