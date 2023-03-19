@@ -2,7 +2,8 @@ pipeline
 {
     agent any
     stages
-    { stage ('scm checkout')
+    { 
+    stage ('scm checkout')
     { 
     steps {sh 'echo code is downloaded'}
     }
@@ -16,6 +17,7 @@ pipeline
     }
     stage ('deploy to QA env')
     {
-        stage{sh 'deploy to QA env'}}
+    steps {sh 'deploy to QA env'}
+    }
     }
 }
